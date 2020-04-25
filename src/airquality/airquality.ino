@@ -20,9 +20,9 @@
 #include "Adafruit_SHT31.h"
 
 // **** configure these values with your steup and credentials ***
-const char* thingSpeakKey = "N3MQ9PDUQY0RRAT9";
-const char* ssid = "BTHub6-RX2F";
-const char* password = "u3CA3bteMr4t";
+const char* thingSpeakKey = "<yourThingspeakChannelKey>";
+const char* ssid = "<youWifiSSID>";
+const char* password = "<yourifiPassword>";
 
 #define publishIntervalMins  1 // how often reading sent to Thingspeak
 
