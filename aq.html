@@ -22,7 +22,7 @@ var channelsLoaded = 0;
 // the 'T' Temperature left axis, or the 'O' Other right axis.
 var channelKeys =[];
 channelKeys.push({channelNumber:1045753, name:'Air Quality',key:'EIAC68FJX35MLGYI',
-                  fieldList:[{field:1,axis:'T'}, {field:2,axis:'H'}, {field:3,axis:'T'}, {field:4,axis:'T'}]});
+                  fieldList:[{field:1,axis:'T'}, {field:2,axis:'H'}, {field:3,axis:'P'}, {field:4,axis:'P'}, {field:5,axis:'P'}]});
 //channelKeys.push({channelNumber:9354, name:'CRYSTAL CITY WEATHER Fault',key:'XXXXXXXXXXXXXXXX',
 //   fieldList:[{field:1,axis:'T'},{field:2,axis:'O'},{field:3,axis:'O'},{field:4,axis:'O'},{field:5,axis:'O'},{field:6,axis:'O'}]});
 
@@ -244,7 +244,7 @@ $(document).ready(function()
 		},
     tooltip: {
       valueDecimals: 1,
-      valueSuffix: '°C',
+      valueSuffix: '',
       xDateFormat:'%Y-%m-%d<br/>%H:%M:%S %p'
 			// reformat the tooltips so that local times are displayed
 			//formatter: function() {
@@ -276,7 +276,14 @@ $(document).ready(function()
             },
             opposite: true,
             id: 'H'
-    }],
+    },{
+            title: {
+                text: 'micrograms/cubic meter'
+            },
+            opposite: false,
+            id: 'P'
+    }
+    ],
 		exporting: {
 		  enabled: true,
       csv: {
@@ -408,11 +415,11 @@ function loadChannelHistory(sentChannelIndex,channelNumber,key,sentFieldList,sen
 }
 
   </script>
-    <title>Air Qauility</title>
+    <title>Air Quality Monitoring Station</title>
   </head>
   <body style="                      background-color: white;">
     <div id="chart-container" style="height: 600px;"><br>
-      Air Quality IoT ESP32/SHT31<br>
+      Air Quality Monitoring Station<br>
     </div>
     <div id="below chart"> <button style="width: 89px; margin-top: -18px;" value="Hide All"
         name="Hide All Button"
