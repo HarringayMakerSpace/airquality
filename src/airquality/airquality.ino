@@ -116,7 +116,7 @@ bool avgSamples() {
   Serial.print("Avg PM1: "); Serial.println(pm1) ;
   Serial.print("Avg PM2.5: "); Serial.println(pm25) ;
   Serial.print("Avg PM10: "); Serial.println(pm10) ;
- 
+
   samples = 0;
   return true;
 }
